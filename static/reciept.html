@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Store - Shopping</title>
+</head>
+<body>
+    <header>
+        <div class="header-image">
+            <img src="https://img.freepik.com/premium-photo/cute-colorful-shopping-cart-clipart-your-projects-presentations_983420-28273.jpg" alt="Shopping Cart Logo">
+        </div>
+        <h1 class="site-title">Shopping POS</h1>
+    </header>
+
+    <main class="content">
+        <aside class="reciept-container">
+            <div class="reciept-items-container">
+                <div class="reciept-item" data-name="Water" data-quantity="2" data-price="2">
+                    <span class="item-title">Water</a> <span class="item-qunatity">x2</span> <span class="item-price">$2</span>
+                </div>
+                <div class="reciept-item" data-name="Soda" data-quantity="3" data-price="6">
+                    <span class="item-title">Soda</a> <span class="item-qunatity">x3</span> <span class="item-price">$6</span>
+                </div>
+            </div>
+            <div class="reciept-total" data-total="20">
+                <h3>Total - $20</h3>
+            </div>
+        </aside>
+        <aside class="payment-container">
+            <button type="button" id="pay-button" class="reciept-button">Pay</button>
+            <button type="button" id="cancel-button" class="reciept-button">Cancel</button>
+        </aside>
+    </main>
+
+    <div id="popup-backdrop" class="hidden"></div>
+    <div id="payment-popup" class="hidden">
+        <div id="payment-popup-header">
+            <button type="button" id="payment-cancel-button">Cancel</button>
+            <h1 id="payment-popup-title">Select Payment Method</h1>
+        </div>
+        <div class="payment-option">
+            <button type="button" class="payment-button" id="payment-cash-button">Cash</button>
+            <img src="https://img.freepik.com/free-psd/money-illustration-isolated_23-2151568528.jpg" alt="Cash icon" class="payment-option-img">
+        </div>
+        <div class="payment-option">
+            <button type="button" class="payment-button" id="payment-card-button">Card</button>
+            <img src="https://pngimg.com/d/credit_card_PNG100.png" alt="Card icon" class="payment-option-img">
+        </div>
+    </div>
+</body>
+</html>
