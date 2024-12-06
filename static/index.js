@@ -58,13 +58,12 @@ function clearReceipt() {
     receiptTotal.innerHTML = '<h3>Total - $0 </h3>'
 }
 
-document.getElementById('cancel-button').onclick = clearReceipt
+document.getElementById('pay-cancel-button').onclick = clearReceipt
 
 // Pay button should show payment popup
     
 
 // Add button on a product should add its information to the receipt and update the current receipt total
-
 
 function addToReceipt(event) {
     // Get the product details
@@ -76,15 +75,20 @@ function addToReceipt(event) {
     var receiptItemsContainer = document.querySelector('.receipt-items-container')
     var receiptTotalElement = document.querySelector('.receipt-total')
 
-    // Check if product is already in receipt
+    // Check product is already in receipt
     var existingItem = receiptItemsContainer.querySelector(`[data-name="${name}"]`)
-    // If this item is in the receipt
+
+    // If in  receipt
     if (existingItem) {
         // Update amount of items in cart and cost associated
         var currentAmount = parseInt(existingItem.getAttribute('data-amount'))
-        existingItem.setAttribute('data-amount', currentAmount + 1)
-        existingItem.querySelector('.receipt-item-amount').textContent = 'x${newAmount}'
-        existingItem.querySelector('.receipt-item-price').textContent = '$${newAmount * price}'
+        var newAmount = currentAmount + 1
+        existingItem.setAttribute('data-amount', newAmount)
+        existingItem.querySelector('.receipt-item-amount').textContent = `x${newAmount}`
+        existingItem.querySelector('.receipt-item-price').textContent = `$${newAmount * price}`
+    } else {
+        // TODO: Add items when not already in receipt
+        console.log("Item not in receipt yes")  
     }
 
     var currentTotal = parseFloat(receiptTotalElement.getAttribute('data-total'))
@@ -92,6 +96,11 @@ function addToReceipt(event) {
     receiptTotalElement.setAttribute('data-total', newTotal)
     receiptTotalElement.innerHTML = `<h3>Total - $${newTotal}</h3>`
 }
+
+// for every product-add-button, add the item to the receipt
+document.querySelectorAll('.product-add-button').forEach((button) => {
+    button.onclick = addToReceipt
+})
 
 // Payment popup cancel button should close payment popup
 
