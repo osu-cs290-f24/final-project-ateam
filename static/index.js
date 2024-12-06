@@ -1,3 +1,6 @@
+/*
+    HOME CODE
+*/
 // Make home button link to products page
 var homeButton = document.getElementById('home-start-button')
 if(homeButton) {
@@ -7,24 +10,40 @@ if(homeButton) {
 }
 
 /*
-            <div class="reciept-items-container">
-                 <!-- receipt item-->
-                <div class="reciept-item" data-name="Water Bottle" data-amount="2" data-price="2">
-                    <span class="reciept-item-title">Water Bottle</a> <span class="reciept-item-amount">x2</span> <span class="reciept-item-price">$2</span>
-                </div>
-                 <!-- receipt item-->
-                <div class="reciept-item" data-name="Soda" data-amount="3" data-price="6">
-                    <span class="reciept-item-title">Soda</span> <span class="reciept-item-amount">x3</span> <span class="reciept-item-price">$6</span>
-                </div>
-            </div>
-            <div class="reciept-total" data-total="20">
-                <h3>Total - $20</h3>
-            </div>
+    POPUP CODE
 */
+// Store elements for popups
+var popupBg = document.getElementById("popup-backdrop")
+var payPopup = document.getElementById("payment-popup")
+var transCompletePopup = document.getElementById("complete-trans-popup")
 
-// Add itemType dropdown HTML
-// Completed transaction popup has okay button that returns to home page
+// Toggle display of payment popup
+function togglePayPopup() {
+    //popupBg.classList.toggle("hidden")
+    payPopup.classList.toggle("hidden")
+}
+// Register payment toggle function to payment button and payment cancel button
+document.getElementById('pay-button').onclick = togglePayPopup
+document.getElementById('payment-cancel-button').onclick = togglePayPopup
 
+
+// Toggle display of transaction complete popup
+function toggleTransCompletePopup() {
+    //popupBg.classList.toggle("hidden")
+    transCompletePopup.classList.toggle("hidden")
+}
+// Register transaction complete toggle function to card and cash payment buttons
+document.getElementById('payment-card-button').onclick = toggleTransCompletePopup
+document.getElementById('payment-cash-button').onclick = toggleTransCompletePopup
+
+// Make transaction complete okay button link to home page
+document.getElementById('complete-trans-ok-button').onclick = function () {
+    location.href = "home.html"
+}
+
+/*
+    Products Page Code
+*/
 var productsContainer = document.getElementById('products')
 var products = Array.from(productsContainer.children)
 
@@ -56,11 +75,6 @@ function clearReceipt() {
 }
 
 document.getElementById('pay-cancel-button').onclick = clearReceipt
-
-// Pay button should show payment popup
-    
-
-// Add button on a product should add its information to the receipt and update the current receipt total
 
 function addToReceipt(event) {
     // Get the product details
@@ -98,21 +112,3 @@ function addToReceipt(event) {
 document.querySelectorAll('.product-add-button').forEach((button) => {
     button.onclick = addToReceipt
 })
-
-// Payment popup cancel button should close payment popup
-
-
-// Payment popup cash/credit button should display popup for "Transaction completed"
-
-
-// Completed transaction popup okay button should return to home page
-
-
-/*
-        "name": "Beige Bed",
-        "price": "399.99",
-        "image": "Beds/Beige_Bed_F.avif",
-        "mouseImage": "Beds/Beige_Bed_S.avif",
-        "amount": "4",
-        "itemType": "Beds"
-*/
