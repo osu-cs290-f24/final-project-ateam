@@ -4,75 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>store kiosk</title>
-    <script src="/index.js" charset="utf-8" defer></script>
+    <script src="index.js" charset="utf-8" defer></script>
+    <script src="test.js" charset="utf-8" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- page header -->
-    <header>
-        <div class="header-image">
-            <img src="https://img.freepik.com/premium-photo/cute-colorful-shopping-cart-clipart-your-projects-presentations_983420-28273.jpg" alt="Shopping Cart Logo">
-        </div>
-        <h1 class="site-title">Shopping POS</h1>
-    </header>
-    <main class="content">
-        <!-- category search -->
-        <aside class="sub-header">
-            <aside class="catogory-filter">
-                <div class="filter-input-container">
-                    <div class="search-icon">
-                        <img src="https://static.vecteezy.com/system/resources/previews/001/504/972/non_2x/search-icon-free-vector.jpg" alt="Spyglass Icon">
-                    </div>
-                    <label for="filter-text" class="filter-input-label">Search by Name/Category/Barcode</label>
-                    <div class="filter-input-element">
-                        <input type="text" name="filter-text" id="filter-text" class="filter-input">
-                    </div>
-                </div>
-            </aside>
-        </aside>
-
-        <!-- receipt -->
-        <aside class="reciept-container">
-            <div class="reciept-items-container">
-                {{#each receipt}}
-                    {{>receipt}}
-                {{/each}}
-                
-            </div>
-            <div class="reciept-total" data-total="20">
-                <h3>Total - $20</h3>
-            </div>
-        </aside>
-        <aside class="payment-container">
-            <button type="button" id="pay-button" class="reciept-button">Pay</button>
-            <button type="button" id="cancel-button" class="reciept-button">Cancel</button>
-        </aside>
-
-        <!-- product flex box-->
-        <section id="products">
-            <!-- product-->
-            {{#each post}}
-                {{>post}}
-            {{/each}}
-            
-           
-        </section>
-    </main>
-
-    <!-- payment popup -->
-    <div id="popup-backdrop" class="hidden"></div>
-    <div id="payment-popup" class="hidden">
-        <div id="payment-popup-header">
-            <button type="button" id="payment-cancel-button">Cancel</button>
-            <h1 id="payment-popup-title">Select Payment Method</h1>
-        </div>
-        <div class="payment-option">
-            <button type="button" class="payment-button" id="payment-cash-button">Cash</button>
-            <img src="https://img.freepik.com/free-psd/money-illustration-isolated_23-2151568528.jpg" alt="Cash icon" class="payment-option-img">
-        </div>
-        <div class="payment-option">
-            <button type="button" class="payment-button" id="payment-card-button">Card</button>
-            <img src="https://pngimg.com/d/credit_card_PNG100.png" alt="Card icon" class="payment-option-img">
-        </div>
-    </div>
+    {{{body}}}
 </body>
 </html>
