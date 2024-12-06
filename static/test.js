@@ -1,33 +1,28 @@
 // Store elements for popups
 var popupBg = document.getElementById("popup-backdrop")
 var payPopup = document.getElementById("payment-popup")
+var transCompletePopup = document.getElementById("complete-trans-popup")
 
-// Register payment toggle function to payment button
-document.getElementById('pay-button').onclick = function() {  
+// Toggle display of payment popup
+function togglePayPopup() {
     //popupBg.classList.toggle("hidden")
     payPopup.classList.toggle("hidden")
 }
+// Register payment toggle function to payment button and payment cancel button
+document.getElementById('pay-button').onclick = togglePayPopup
+document.getElementById('payment-cancel-button').onclick = togglePayPopup
 
 
+// Toggle display of transaction complete popup
+function toggleTransCompletePopup() {
+    //popupBg.classList.toggle("hidden")
+    transCompletePopup.classList.toggle("hidden")
+}
+// Register transaction complete toggle function to card and cash payment buttons
+document.getElementById('payment-card-button').onclick = toggleTransCompletePopup
+document.getElementById('payment-cash-button').onclick = toggleTransCompletePopup
 
-document.getElementById('payment-cancel')
-
-
-
-/*
-    <div id="payment-popup-header">
-        <button type="button" id="payment-cancel-button">Cancel</button>
-        <h1 id="payment-popup-title">Select Payment Method</h1>
-    </div>
-    <div class="payment-option">
-        <button type="button" class="payment-button" id="payment-cash-button">Cash</button>
-        <img src="https://img.freepik.com/free-psd/money-illustration-isolated_23-2151568528.jpg" alt="Cash icon" class="payment-option-img">
-    </div>
-    <div class="payment-option">
-        <button type="button" class="payment-button" id="payment-card-button">Card</button>
-        <img src="https://pngimg.com/d/credit_card_PNG100.png" alt="Card icon" class="payment-option-img">
-    </div>
-*/
-// Payment popup cancel button should close payment popup
-
-// Payment popup cash/credit button should display popup for "Transaction completed"
+// Make transaction complete okay button link to home page
+document.getElementById('complete-trans-ok-button').onclick = function () {
+    location.href = "home.html"
+}
