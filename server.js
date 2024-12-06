@@ -37,13 +37,14 @@ app.get('/products/:post', function(req, res, next){
     if (avalableproducts) {
         res.render("photoPage",{
             name: productdata.name,
-            
             price:productdata.price,
             image:productdata.image,
             mouseImage:productdata.mouseimage, 
             amount:productdata.amount,
             itemType:productdata.itemType,
         })
+    } else {
+        next()
     }
 })
 
