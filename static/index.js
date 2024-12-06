@@ -6,19 +6,6 @@ if(homeButton) {
     };
 }
 
-// Store references to product page elements
-function clearReceipt()
-{
-
-
-
-
-}
-
-
-
-
-
 /*
             <div class="reciept-items-container">
                  <!-- receipt item-->
@@ -35,18 +22,28 @@ function clearReceipt()
             </div>
 */
 
-
-
-
 // Add itemType dropdown HTML
 // Completed transaction popup has okay button that returns to home page
 
+var productsContainer = document.getElementById('products')
+var products = Array.from(productsContainer.children)
 
 // Filtering products display by entered product name and itemType when user presses enter on search box
+function filterProductsByType() {
+    var selectedCategory = document.getElementById('filter-type').value
 
+    productsContainer.innerHTML = ''
 
+    products.forEach((product) => {
+        var itemType = product.getAttribute('data-itemtype')
+        if (selectedCategory === "" || itemType === selectedCategory) {
+            //Add post back into container
+            productsContainer.appendChild(product)
+        } 
+    })
+}
 
-
+document.getElementById('filter-type').onchange = filterProductsByType
 
 // Cancel button should remove everything from receipt
 function clearReceipt() {
