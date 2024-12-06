@@ -49,9 +49,19 @@ function clearReceipt()
 
 
 // Cancel button should remove everything from receipt
+function clearReceipt() {
+    var receiptItemsContainer = document.querySelector('.receipt-items-container')
+    var receiptTotal = document.querySelector('.reciept-total')
+
+    receiptItemsContainer.innerHTML = ''
+    receiptTotal.setAttribute('data-total', '0')
+    receiptTotal.innerHTML = '<h3>Total - $0 </h3>'
+}
+
+document.getElementById('cancel-button').onclick = clearReceipt
 
 // Pay button should show payment popup
-
+    
 
 // Add button on a product should add its information to the receipt and update the current receipt total
 
