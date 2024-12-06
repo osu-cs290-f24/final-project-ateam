@@ -1,3 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Courier New", monospace;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    background-color: yellow;
+}
+
+.header-image {
+    width: auto;
+    height: 65%;
+}
+
+.header-image img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.site-title {
+    font-size: 4rem;
+}
+
+.content {
+    display: flex;
+    height: 90vh;
+}
+
+.receipt-container {
+    width: 15vw;
+    background-color: green;
+}
+
+.browsing-container {
+    display: flex;
+    width: 85vw;
+    background-color: blue;
+}
+
+
+
+
+
+
+
 .hidden {
     display: none;
 }
