@@ -26,8 +26,25 @@ app.get("/", function (req,res) {
 
 app.get("/main",function(req,res){
     res.render("main",{
+        
         post: itemdata
     })
+})
+
+app.get('/products/:post', function(req, res, next){
+    var post=req.params.post
+    var productdata=productdata[post]
+    if (avalableproducts) {
+        res.render("photoPage",{
+            name: productdata.name,
+            
+            price:productdata.price,
+            image:productdata.image,
+            mouseImage:productdata.mouseimage, 
+            amount:productdata.amount,
+            itemType:productdata.itemType,
+        })
+    }
 })
 
 
