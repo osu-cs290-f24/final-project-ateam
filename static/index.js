@@ -51,7 +51,7 @@ function clearReceipt()
 // Cancel button should remove everything from receipt
 function clearReceipt() {
     var receiptItemsContainer = document.querySelector('.receipt-items-container')
-    var receiptTotal = document.querySelector('.reciept-total')
+    var receiptTotal = document.querySelector('.receipt-total')
 
     receiptItemsContainer.innerHTML = ''
     receiptTotal.setAttribute('data-total', '0')
@@ -65,6 +65,33 @@ document.getElementById('cancel-button').onclick = clearReceipt
 
 // Add button on a product should add its information to the receipt and update the current receipt total
 
+
+function addToReceipt(event) {
+    // Get the product details
+    var product = event.target.closest('.product')
+    var name = product.getAttribute('data-name')
+    var price = parseFloat(product.getAttribute('data-price'))
+
+    // Get receipt container
+    var receiptItemsContainer = document.querySelector('.receipt-items-container')
+    var receiptTotalElement = document.querySelector('.receipt-total')
+
+    // Check if product is already in receipt
+    var existingItem = receiptItemsContainer.querySelector(`[data-name="${name}"]`)
+    // If this item is in the receipt
+    if (existingItem) {
+        // Update amount of items in cart and cost associated
+        var currentAmount = parseInt(existingItem.getAttribute('data-amount'))
+        existingItem.setAttribute('data-amount', currentAmount + 1)
+        existingItem.querySelector('.receipt-item-amount').textContent = 'x${newAmount}'
+        existingItem.querySelector('.receipt-item-price').textContent = '$${newAmount * price}'
+    }
+
+    var currentTotal = parseFloat(receiptTotalElement.getAttribute('data-total'))
+    var newTotal = currentTotal + price;
+    receiptTotalElement.setAttribute('data-total', newTotal)
+    receiptTotalElement.innerHTML = `<h3>Total - $${newTotal}</h3>`
+}
 
 // Payment popup cancel button should close payment popup
 
