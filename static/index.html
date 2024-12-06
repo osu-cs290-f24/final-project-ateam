@@ -1,80 +1,92 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>store kiosk</title>
     <script src="/index.js" charset="utf-8" defer></script>
-    </head>
+</head>
+<body>
+    <!-- page header -->
     <header>
-    <!-- this is where you could have a header image  -->
+        <div class="header-image">
+            <img src="https://img.freepik.com/premium-photo/cute-colorful-shopping-cart-clipart-your-projects-presentations_983420-28273.jpg" alt="Shopping Cart Logo">
+        </div>
+        <h1 class="site-title">Shopping POS</h1>
     </header>
-
     <main class="content">
-        
-        <!-- catogory search start -->
-
+        <!-- category search -->
         <aside class="sub-header">
-
-        <aside class="catogoryfilter">
-            <div class="filter-input-container">
-
-                <label for="filter-text" class="filter-input-label">Name</label>
-                <div class="filter-input-element">
-
-                    <input type="text" name="filter-text" id="filter-text" class="filter-input">
-                  </div>
+            <aside class="catogory-filter">
+                <div class="filter-input-container">
+                    <div class="search-icon">
+                        <img src="https://static.vecteezy.com/system/resources/previews/001/504/972/non_2x/search-icon-free-vector.jpg" alt="Spyglass Icon">
+                    </div>
+                    <label for="filter-text" class="filter-input-label">Search by Name/Category/Barcode</label>
+                    <div class="filter-input-element">
+                        <input type="text" name="filter-text" id="filter-text" class="filter-input">
+                    </div>
                 </div>
-
+            </aside>
         </aside>
 
-        </aside>
-<!-- catogory section end -->
-
-<!-- order section -->
-        <section id="order-list">
-            <div class="order" data-price="" data-amount="" >
-                <div class="order-content">
-                    <a href="#" class="order-title">title</a> <span class="order-price">price</span><span class="order-amount">amount</span>
+        <!-- receipt -->
+        <aside class="reciept-container">
+            <div class="reciept-items-container">
+                 <!-- receipt item-->
+                <div class="reciept-item" data-name="Water Bottle" data-amount="2" data-price="2">
+                    <span class="reciept-item-title">Water Bottle</a> <span class="reciept-item-amount">x2</span> <span class="reciept-item-price">$2</span>
+                </div>
+                 <!-- receipt item-->
+                <div class="reciept-item" data-name="Soda" data-amount="3" data-price="6">
+                    <span class="reciept-item-title">Soda</span> <span class="reciept-item-amount">x3</span> <span class="reciept-item-price">$6</span>
                 </div>
             </div>
+            <div class="reciept-total" data-total="20">
+                <h3>Total - $20</h3>
+            </div>
+        </aside>
+        <aside class="payment-container">
+            <button type="button" id="pay-button" class="reciept-button">Pay</button>
+            <button type="button" id="cancel-button" class="reciept-button">Cancel</button>
+        </aside>
 
-        </section>
-
-        <section id="payment-area">
-
-
-        <button type="button" id="buy-button" class="buy-button-class">Buy</button>
-
-        <button type="button" id="cancel-button" class="cancel-button-class">Cancel</button>
-        </section>
-
-            
-<!-- order section end -->
- <!-- product stuff start -->
-
-
+        <!-- product flex box-->
         <section id="products">
-            <div class="name" data-price="" data-amount="" data-itemtype="">
+            <!-- product-->
+            <div class="product" data-name="Water Bottle" data-amount="2" data-price="2" data-itemtype="Drink">
                 <div class="product-content">
-                    <div class="image-container">
-                        <img src="" alt="">
+                    <div class="product-add-button-container">
+                        <button type="button" class="product-add-button">Add</button>
+                        <img src="https://media.istockphoto.com/id/688550958/vector/black-plus-sign-positive-symbol.jpg?s=612x612&w=0&k=20&c=0tymWBTSEqsnYYXWeWmJPxMotTGUwaGMGs6BMJvr7X4=", alt="Plus sign">
+                    </div>
+                    <div class="product-image-container">
+                        <img src="https://img.freepik.com/premium-vector/water-bottle-clipart-vector-art-illustration_761413-25979.jpg" alt="Water Bottle">
                     </div>
                     <div class="product-info-container">
-                        <a href="#" class="product-title">where you would put product</a> <span class="product-price">price</span> 
-                        <span class="product-amount">amount</span><span class="item-type">type</span>
-
+                        <h4 class="product-title">Water Bottle</h4>
+                        <h4 class="product-price">$2</h4>
                     </div>
-
                 </div>
             </div>
-
         </section>
     </main>
-    
-    <!-- <button type="button" id="buy-button"><i class="purchase-button"></i></button>
 
-    <button type="button" id="cancel-button"><i class="cancel-button"></i></button> -->
-
-
-
+    <!-- payment popup -->
+    <div id="popup-backdrop" class="hidden"></div>
+    <div id="payment-popup" class="hidden">
+        <div id="payment-popup-header">
+            <button type="button" id="payment-cancel-button">Cancel</button>
+            <h1 id="payment-popup-title">Select Payment Method</h1>
+        </div>
+        <div class="payment-option">
+            <button type="button" class="payment-button" id="payment-cash-button">Cash</button>
+            <img src="https://img.freepik.com/free-psd/money-illustration-isolated_23-2151568528.jpg" alt="Cash icon" class="payment-option-img">
+        </div>
+        <div class="payment-option">
+            <button type="button" class="payment-button" id="payment-card-button">Card</button>
+            <img src="https://pngimg.com/d/credit_card_PNG100.png" alt="Card icon" class="payment-option-img">
+        </div>
+    </div>
+</body>
 </html>
