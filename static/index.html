@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>store kiosk</title>
-    <script src="/index.js" charset="utf-8" defer></script>
+    <script src="index.js" charset="utf-8" defer></script>
+    <script src="style.css" charset="utf-8" defer></script>
 </head>
 <body>
     <!-- page header -->
@@ -15,40 +16,57 @@
         <h1 class="site-title">Shopping POS</h1>
     </header>
     <main class="content">
-        <!-- category search -->
+        <!-- filtering -->
         <aside class="sub-header">
-            <aside class="catogory-filter">
+            <!-- type dropdown -->
+            <div class="filter-input-container">
+                <label for="filter-type" class="filter-input-label">Product Category</label>
+                <div class="filter-input-element">
+                <select id="filter-type" class="filter-input" name="filter-type">
+                    <option selected value="">Any</option>
+                    <option>Beds</option>
+                    <option>Chairs</option>
+                    <option>Dressers</option>
+                    <option>Outdoor</option>
+                    <option>Shelves</option>
+                    <option>Sofas</option>
+                    <option>Tables</option>
+                </select>
+                </div>
+            </div>
+            <!-- product name search -->
+            <aside class="name-filter">
                 <div class="filter-input-container">
                     <div class="search-icon">
                         <img src="https://static.vecteezy.com/system/resources/previews/001/504/972/non_2x/search-icon-free-vector.jpg" alt="Spyglass Icon">
                     </div>
-                    <label for="filter-text" class="filter-input-label">Search by Name/Category/Barcode</label>
+                    <label for="filter-name" class="filter-input-label">Product Name</label>
                     <div class="filter-input-element">
-                        <input type="text" name="filter-text" id="filter-text" class="filter-input">
+                        <input type="text" name="filter-name" id="filter-name" class="filter-input">
                     </div>
                 </div>
             </aside>
         </aside>
 
         <!-- receipt -->
-        <aside class="reciept-container">
-            <div class="reciept-items-container">
+        <aside class="receipt-container">
+            <div class="receipt-items-container">
                  <!-- receipt item-->
-                <div class="reciept-item" data-name="Water Bottle" data-amount="2" data-price="2">
-                    <span class="reciept-item-title">Water Bottle</a> <span class="reciept-item-amount">x2</span> <span class="reciept-item-price">$2</span>
+                <div class="receipt-item" data-name="Water Bottle" data-amount="2" data-price="2">
+                    <span class="receipt-item-title">Water Bottle</a> <span class="receipt-item-amount">x2</span> <span class="receipt-item-price">$2</span>
                 </div>
                  <!-- receipt item-->
-                <div class="reciept-item" data-name="Soda" data-amount="3" data-price="6">
-                    <span class="reciept-item-title">Soda</span> <span class="reciept-item-amount">x3</span> <span class="reciept-item-price">$6</span>
+                <div class="receipt-item" data-name="Soda" data-amount="3" data-price="6">
+                    <span class="receipt-item-title">Soda</span> <span class="receipt-item-amount">x3</span> <span class="receipt-item-price">$6</span>
                 </div>
             </div>
-            <div class="reciept-total" data-total="20">
+            <div class="receipt-total" data-total="20">
                 <h3>Total - $20</h3>
             </div>
         </aside>
         <aside class="payment-container">
-            <button type="button" id="pay-button" class="reciept-button">Pay</button>
-            <button type="button" id="cancel-button" class="reciept-button">Cancel</button>
+            <button type="button" id="pay-button" class="receipt-button">Pay</button>
+            <button type="button" id="cancel-button" class="receipt-button">Cancel</button>
         </aside>
 
         <!-- product flex box-->
@@ -72,8 +90,9 @@
         </section>
     </main>
 
-    <!-- payment popup -->
+    <!-- popups -->
     <div id="popup-backdrop" class="hidden"></div>
+    <!-- transaction popup -->
     <div id="payment-popup" class="hidden">
         <div id="payment-popup-header">
             <button type="button" id="payment-cancel-button">Cancel</button>
@@ -87,6 +106,14 @@
             <button type="button" class="payment-button" id="payment-card-button">Card</button>
             <img src="https://pngimg.com/d/credit_card_PNG100.png" alt="Card icon" class="payment-option-img">
         </div>
+    </div>
+    <!-- completed transaction popup -->
+    <div id="complete-trans-popup" class="hidden">
+        <div id="complete-trans-popup-header">
+            <button type="button" id="complete-trans-cancel-button">Cancel</button>
+            <h1 id="complete-trans-title">Transaction completed! Thank you for shopping with us</h1>
+        </div>
+        <button type="button" id="complete-trans-ok-button">Okay</button>
     </div>
 </body>
 </html>
