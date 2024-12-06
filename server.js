@@ -27,13 +27,13 @@ app.get("/", function (req,res) {
 app.get("/main",function(req,res){
     res.render("main",{
         
-        post: itemdata
+        product: itemdata
     })
 })
 
-app.get('/products/:post', function(req, res, next){
-    var post=req.params.post
-    var productdata=productdata[post]
+app.get('/products/:product', function(req, res, next){
+    var product=req.params.product
+    var productdata=productdata[product]
     if (avalableproducts) {
         res.render("photoPage",{
             name: productdata.name,
