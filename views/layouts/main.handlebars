@@ -33,7 +33,10 @@
         <!-- receipt -->
         <aside class="reciept-container">
             <div class="reciept-items-container">
-       
+                {{#each receipt}}
+                    {{>receipt}}
+                {{/each}}
+                
             </div>
             <div class="reciept-total" data-total="20">
                 <h3>Total - $20</h3>
@@ -47,6 +50,10 @@
         <!-- product flex box-->
         <section id="products">
             <!-- product-->
+            {{#each post}}
+                {{>post}}
+            {{/each}}
+            
            
         </section>
     </main>
