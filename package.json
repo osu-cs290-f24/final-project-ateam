@@ -1,23 +1,17 @@
 {
+  "name": "final-project-ateam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run build",
+    "start": "node server.js",
+    "build": "handlebars views/partials/product.handlebars -f static/product.js && handlebars views/404Page.handlebars -f static/404Page.js && handlebars views/partials/receiptItem.handlebars -f static/receiptItem.js && handlebars views/productPage.handlebars -f static/productPage.js && handlebars views/layouts/main.handlebars -f static/main.js && handlebars views/homePage.handlebars -f static/homePage.js"
+  },
   "dependencies": {
     "express": "^4.21.1",
     "express-handlebars": "^8.0.1",
     "handlebars": "^4.7.8"
-  },
-  "name": "final-project-ateam",
-  "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "start": "node server.js:",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"handlebars ./views/partials/product.handlebars -f static/postTemplate.js",
-    "prestart":"npm run build"
-
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
-
+  }
 }
