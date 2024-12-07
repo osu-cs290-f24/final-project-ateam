@@ -1,56 +1,41 @@
+// Import modules
+var path = require('path')
+var fs = require('fs')
 var express = require('express')
-var expresshandle = require('express-handlebars')
 
-var itemdata=require("./itemData.json")
+// Load post data into an array
+const postList = JSON.parse(fs.readFileSync(path.join(__dirname, 'itemData.json')))
 
+// Get web server and pick port
 var app = express()
 var port = process.env.PORT || 3000
 
-app.engine("handlebars", expresshandle.engine())
+// Register handlebars with server
+var exphbs = require('express-handlebars');
+app.engine('handlebars', exphbs.engine({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
-app.set("view engine","handlebars")
-
+// Load static files
 app.use(express.static('static'))
 
-
-app.get("/", function (req,res) {
-    console.log("-- home page requested ")
-    
-  
-    res.render("home")
-
-
-
-
+// Load general posts page
+app.get('/', function (req, res) {
+    res.status(200).render("productPage", {
+        products: [],
+        receiptItems: []
+    });
 })
 
-app.get("/main",function(req,res){
-    res.render("main",{
-        
-        product: itemdata
-    })
+app.get('/home', function (req, res) {
+    res.status(200).render("homePage");
 })
 
-app.get('/products/:product', function(req, res, next){
-    var product=req.params.product
-    var productdata=productdata[product]
-    if (avalableproducts) {
-        res.render("photoPage",{
-            name: productdata.name,
-            price:productdata.price,
-            image:productdata.image,
-            mouseImage:productdata.mouseimage, 
-            amount:productdata.amount,
-            itemType:productdata.itemType,
-        })
-    } else {
-        next()
-    }
-})
-
-
+// Send 404 page for invalid URL
 app.get('*', function (req, res) {
-    res.status(404).render("404")
+    res.status(404).render("404Page")
+})
 
-    
+// Have server listen on port and print message on success
+app.listen(port, function () {
+    console.log("== Server is listening on port", port)
 })
