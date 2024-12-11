@@ -1,1 +1,8 @@
 node_modules/
+package-lock.js
+static/404Page.js
+static/homePage.js
+static/main.js
+static/product.js
+static/productPage.js
+static/receiptItem.js
