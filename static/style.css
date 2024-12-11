@@ -279,17 +279,6 @@ header {
     width: 25px;
     height: 25px;
 }
-.product-title {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-}
-
-.product-price {
-    font-size: 0.8rem;
-    color: #555;
-}
 
 .product-add-button-container {
     width: 25px;
@@ -353,4 +342,166 @@ header {
 .click-to-start {
     font-size: 1.5rem;
     color: #555;
+}
+
+#popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    display: none;
+}
+
+#popup-backdrop.hidden {
+    display: none;
+}
+
+#popup-backdrop:not(.hidden) {
+    display: block;
+}
+
+#payment-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    display: none;
+}
+
+#payment-popup.hidden {
+    display: none;
+}
+
+#payment-popup:not(.hidden) {
+    display: block;
+}
+
+#payment-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+#payment-popup-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#payment-cancel-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#payment-cancel-button:hover {
+    background-color: #c82333;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.payment-option:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.payment-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.payment-button:hover {
+    background-color: #0056b3;
+}
+
+.payment-option-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+#complete-trans-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    display: none;
+}
+
+#complete-trans-popup.hidden {
+    display: none;
+}
+
+#complete-trans-popup:not(.hidden) {
+    display: block;
+}
+
+#complete-trans-popup-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+#complete-trans-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#complete-trans-ok-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+#complete-trans-ok-button:hover {
+    background-color: #218838;
 }
