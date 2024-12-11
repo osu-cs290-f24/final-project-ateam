@@ -17,6 +17,29 @@ app.set('view engine', 'handlebars');
 
 // Load static files
 app.use(express.static('static'))
+// Middleware to parse JSON request body
+app.use(express.json())
+
+//update product quantity
+app.post('/update-stock', (req, res) => {
+    var { productName, quantity } = req.body
+
+    if (productList[productName]) {
+        let currentAmount = parseInt(productList[productName].amount)
+
+        if (currentAmount >= quantity) {
+            // Decrement stock
+            productList[productName].amount = (currentAmount - quantity).toString()
+
+            // Write updated data to itemData.json
+            fs.writeFileSync(
+                path.join(__dirname, 'itemData.json'),
+                JSON.stringify(productList, null, 2)
+            )
+
+            res.status(200).send({ message: "Stock updated successfully", product: productList[productName] })
+        } else { res.status(400).send({ message: "Not enough stock available" })}
+}})
 
 // Load general posts page
 app.get('/', function (req, res) {
@@ -27,7 +50,7 @@ app.get('/products', function (req, res) {
     res.status(200).render("productPage", {
         products: productList,
         receiptItems: []
-    });
+    })
 })
 
 // Send 404 page for invalid URL
