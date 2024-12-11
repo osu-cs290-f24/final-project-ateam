@@ -1,15 +1,18 @@
-<div class="product" data-name="{{name}}" data-amount="{{amount}}" data-price="{{price}}" data-itemtype="{{itemType}}">
-    <div class="product-content">
-        <div class="product-image-container">
-            <img src="/furniture/{{image}}" alt="{{name}}">
-        </div>
-        <div class="product-info-container">
-            <div class="product-title-price">
-                <h4 class="product-title">{{name}}</h4>
-                <h4 class="product-price">${{price}}</h4>
+<div class"product-gray-box">
+    <div class="product" data-name="{{name}}" data-amount="{{amount}}" data-price="{{price}}" data-itemtype="{{itemType}}">
+        <div class="product-content">
+            <div class="product-image-container">
+                <img src="/furniture/{{image}}" alt="{{name}}">
             </div>
-            <div class="product-add-button-container">
-                <img src="https://img.icons8.com/?size=100&id=62888&format=png&color=000000" alt="plus sign">
+            <div class="product-info-container">
+                <div class="product-title-price">
+                    <h4 class="product-title">{{name}}</h4>
+                    <h4 class="product-price">${{price}}</h4>
+                    <h4 class="product-amount">Quantity: {{amount}}</h4>
+                </div>
+                <div class="product-add-button-container">
+                    <img src="https://img.icons8.com/?size=100&id=62888&format=png&color=000000" alt="plus sign">
+                </div>
             </div>
         </div>
     </div>
