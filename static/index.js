@@ -5,7 +5,7 @@
 var homeButton = document.getElementById('home-start-button')
 if(homeButton) {
     homeButton.onclick = function () {
-        location.href = "index.html";
+        location.href = "/products";
     };
 }
 
@@ -38,7 +38,7 @@ document.getElementById('payment-cash-button').onclick = toggleTransCompletePopu
 
 // Make transaction complete okay button link to home page
 document.getElementById('complete-trans-ok-button').onclick = function () {
-    location.href = "home.html"
+    location.href = "/"
 }
 
 /*
