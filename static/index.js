@@ -2,7 +2,7 @@
     HOME CODE
 */
 // Make home button link to products page
-var homeButton = document.getElementById('home-start-button')
+var homeButton = document.getElementById('home-img-id')
 if(homeButton) {
     homeButton.onclick = function () {
         location.href = "/products";
