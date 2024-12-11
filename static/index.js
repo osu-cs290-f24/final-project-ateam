@@ -102,45 +102,44 @@ function addToReceipt(event) {
     })
 
     .then (data => {
-    // Get receipt container
-    var receiptItemsContainer = document.querySelector('.receipt-items-container')
-    var receiptTotalElement = document.querySelector('.receipt-total')
+        // Get receipt container
+        var receiptItemsContainer = document.querySelector('.receipt-items-container')
+        var receiptTotalElement = document.querySelector('.receipt-total')
 
-    // Check product is already in receipt
-    var existingItem = receiptItemsContainer.querySelector(`[data-name="${name}"]`)
+        // Check product is already in receipt
+        var existingItem = receiptItemsContainer.querySelector(`[data-name="${name}"]`)
 
-    // If in  receipt
-    if (existingItem) {
-        // Update amount of items in cart and cost associated
-        var currentAmount = parseInt(existingItem.getAttribute('data-amount'))
-        var newAmount = currentAmount + 1
-        existingItem.setAttribute('data-amount', newAmount)
-        existingItem.querySelector('.receipt-item-amount').textContent = `x${newAmount}`
-        existingItem.querySelector('.receipt-item-price').textContent = `$${(newAmount * price).toFixed(2)}`
-    } else {
-        // Store contents of a receipt item
-        var content = {
-            name: name,
-            amount: 1,
-            price: price.toFixed(2)
+        // If in  receipt
+        if (existingItem) {
+            // Update amount of items in cart and cost associated
+            var currentAmount = parseInt(existingItem.getAttribute('data-amount'))
+            var newAmount = currentAmount + 1
+            existingItem.setAttribute('data-amount', newAmount)
+            existingItem.querySelector('.receipt-item-amount').textContent = `x${newAmount}`
+            existingItem.querySelector('.receipt-item-price').textContent = `$${(newAmount * price).toFixed(2)}`
+        } else {
+            // Store contents of a receipt item
+            var content = {
+                name: name,
+                amount: 1,
+                price: price.toFixed(2)
+            }
+            // Insert item into receipt item into handlebars template and get returned HTML
+            var itemHTML = Handlebars.templates.receiptItem(content)
+            // Add new item HTML into the DOM at the end of the receipt item container section
+            receiptItemsContainer.insertAdjacentHTML("beforeend", itemHTML)
         }
-        // Insert item into receipt item into handlebars template and get returned HTML
-        var itemHTML = Handlebars.templates.receiptItem(content)
-        // Add new item HTML into the DOM at the end of the receipt item container section
-        receiptItemsContainer.insertAdjacentHTML("beforeend", itemHTML)
-    }
 
-    var currentTotal = parseFloat(receiptTotalElement.getAttribute('data-total'))
-    var newTotal = (currentTotal + price).toFixed(2)
-    receiptTotalElement.setAttribute('data-total', newTotal)
-    receiptTotalElement.innerHTML = `<h3>Total - $${newTotal}</h3>`
-
+        var currentTotal = parseFloat(receiptTotalElement.getAttribute('data-total'))
+        var newTotal = (currentTotal + price).toFixed(2)
+        receiptTotalElement.setAttribute('data-total', newTotal)
+        receiptTotalElement.innerHTML = `<h3>Total - $${newTotal}</h3>`
     })
     .catch(err => { alert(`Error: ${err.message}`)}) 
 }
 
 // for every product-add-button, add the item to the receipt
-document.querySelectorAll('.product-add-button').forEach((button) => {
+document.querySelectorAll('.product-add-button-container').forEach((button) => {
     button.onclick = addToReceipt
 })
 
