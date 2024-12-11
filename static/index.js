@@ -5,8 +5,8 @@
 var homeButton = document.getElementById('home-img-id')
 if(homeButton) {
     homeButton.onclick = function () {
-        location.href = "/products";
-    };
+        location.href = "/products"
+    }
 }
 
 /*
@@ -72,7 +72,22 @@ function clearReceipt() {
     receiptItemsContainer.innerHTML = ''
     receiptTotal.setAttribute('data-total', '0')
     receiptTotal.innerHTML = '<h3>Total - $0 </h3>'
+
+    // RESTOCK itemData.json by hard resetting
+    fetch('/restore', { method: 'POST' })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(err => { throw new Error(err.message)})
+            }
+            return response.json()
+        })
+        .then(data => { console.log(data.message)})
+        .catch(err => {
+            alert(`Error restoring stock: ${err.message || "An unknown error occurred"}`)
+            console.error("Restore stock error:", err)
+        })
 }
+
 
 document.getElementById('pay-cancel-button').onclick = clearReceipt
 
@@ -95,10 +110,10 @@ function addToReceipt(event) {
     .then(response => {
         if (!response.ok) {
             // RUN .CATCH (ERR)
-            return response.json().then(err => { throw new Error(err.message) });
+            return response.json().then(err => { throw new Error(err.message) })
         }
         // SEND TO .then (data)
-        return response.json();
+        return response.json()
     })
 
     .then (data => {

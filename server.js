@@ -20,6 +20,30 @@ app.use(express.static('static'))
 // Middleware to parse JSON request body
 app.use(express.json())
 
+// CREATE backup of itemData.json
+var originalDataPath = path.join(__dirname, 'itemData.original.json')
+if (fs.existsSync(originalDataPath)) {
+    fs.copyFileSync(path.join(__dirname, 'itemdata.json'), originalDataPath)
+}
+// add route to index.js to restore itemData.js
+app.post('/restore', (req, res) => {
+    try {
+        // Restore the backup
+        fs.copyFileSync(originalDataPath, path.join(__dirname, 'itemData.json'))
+
+        // Reload productList from the restored file
+        const restoredData = JSON.parse(fs.readFileSync(path.join(__dirname, 'itemData.json')))
+        Object.assign(productList, restoredData);
+
+        // Send JSON response
+        res.status(200).send({ message: "Stock restored successfully" })
+    } catch (err) {
+        console.error("Error restoring stock:", err)
+        res.status(500).send({ message: "Failed to restore stock" })
+    }})
+
+
+
 //update product quantity
 app.post('/update-stock', (req, res) => {
     var { productName, quantity } = req.body
