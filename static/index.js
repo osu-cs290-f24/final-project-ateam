@@ -96,13 +96,13 @@ function addToReceipt(event) {
         var newAmount = currentAmount + 1
         existingItem.setAttribute('data-amount', newAmount)
         existingItem.querySelector('.receipt-item-amount').textContent = `x${newAmount}`
-        existingItem.querySelector('.receipt-item-price').textContent = `$${newAmount * price}`
+        existingItem.querySelector('.receipt-item-price').textContent = `$${(newAmount * price).toFixed(2)}`
     } else {
         // Store contents of a receipt item
         var content = {
             name: name,
             amount: 1,
-            price: price
+            price: price.toFixed(2)
         }
         // Insert item into receipt item into handlebars template and get returned HTML
         var itemHTML = Handlebars.templates.receiptItem(content)
