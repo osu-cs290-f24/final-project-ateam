@@ -4,7 +4,7 @@ var fs = require('fs')
 var express = require('express')
 
 // Load post data into an array
-const postList = JSON.parse(fs.readFileSync(path.join(__dirname, 'itemData.json')))
+const productList = JSON.parse(fs.readFileSync(path.join(__dirname, 'itemData.json')))
 
 // Get web server and pick port
 var app = express()
@@ -20,14 +20,14 @@ app.use(express.static('static'))
 
 // Load general posts page
 app.get('/', function (req, res) {
-    res.status(200).render("productPage", {
-        products: [],
-        receiptItems: []
-    });
+    res.status(200).render("homePage")
 })
 
-app.get('/home', function (req, res) {
-    res.status(200).render("homePage");
+app.get('/products', function (req, res) {
+    res.status(200).render("productPage", {
+        products: productList,
+        receiptItems: []
+    });
 })
 
 // Send 404 page for invalid URL
