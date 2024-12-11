@@ -98,12 +98,20 @@ function addToReceipt(event) {
         existingItem.querySelector('.receipt-item-amount').textContent = `x${newAmount}`
         existingItem.querySelector('.receipt-item-price').textContent = `$${newAmount * price}`
     } else {
-        // TODO: Add items when not already in receipt
-        console.log("Item not in receipt yes")  
+        // Store contents of a receipt item
+        var content = {
+            name: name,
+            amount: 1,
+            price: price
+        }
+        // Insert item into receipt item into handlebars template and get returned HTML
+        var itemHTML = Handlebars.templates.receiptItem(content)
+        // Add new item HTML into the DOM at the end of the receipt item container section
+        receiptItemsContainer.insertAdjacentHTML("beforeend", itemHTML)
     }
 
     var currentTotal = parseFloat(receiptTotalElement.getAttribute('data-total'))
-    var newTotal = currentTotal + price;
+    var newTotal = (currentTotal + price).toFixed(2)
     receiptTotalElement.setAttribute('data-total', newTotal)
     receiptTotalElement.innerHTML = `<h3>Total - $${newTotal}</h3>`
 }
