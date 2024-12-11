@@ -82,6 +82,26 @@ function addToReceipt(event) {
     var name = product.getAttribute('data-name')
     var price = parseFloat(product.getAttribute('data-price'))
 
+    // Throw request 
+    fetch('/update-stock', {
+        // Send data to server
+        method: 'POST',
+        // data sent in json format
+        headers: {'Content-Type': 'application/json' },
+        // Decrement stock by 1
+        body: JSON.stringify({ productName: name, quantity: 1 })
+    })
+    // 
+    .then(response => {
+        if (!response.ok) {
+            // RUN .CATCH (ERR)
+            return response.json().then(err => { throw new Error(err.message) });
+        }
+        // SEND TO .then (data)
+        return response.json();
+    })
+
+    .then (data => {
     // Get receipt container
     var receiptItemsContainer = document.querySelector('.receipt-items-container')
     var receiptTotalElement = document.querySelector('.receipt-total')
@@ -114,9 +134,14 @@ function addToReceipt(event) {
     var newTotal = (currentTotal + price).toFixed(2)
     receiptTotalElement.setAttribute('data-total', newTotal)
     receiptTotalElement.innerHTML = `<h3>Total - $${newTotal}</h3>`
+
+    })
+    .catch(err => { alert(`Error: ${err.message}`)}) 
 }
 
 // for every product-add-button, add the item to the receipt
 document.querySelectorAll('.product-add-button').forEach((button) => {
     button.onclick = addToReceipt
 })
+
+
