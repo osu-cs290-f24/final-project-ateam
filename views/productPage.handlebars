@@ -1,87 +1,94 @@
-<!-- page header -->
-<header>
-    <div class="header-image">
-        <img src="https://img.freepik.com/premium-photo/cute-colorful-shopping-cart-clipart-your-projects-presentations_983420-28273.jpg" alt="Shopping Cart Logo">
-    </div>
-    <h1 class="site-title">Shopping POS</h1>
-</header>
-<main class="content">
-    <!-- filtering -->
-    <aside class="sub-header">
-        <!-- type dropdown -->
-        <div class="filter-input-container">
-            <label for="filter-type" class="filter-input-label">Product Category</label>
-            <div class="filter-input-element">
-            <select id="filter-type" class="filter-input" name="filter-type">
-                <option selected value="">Any</option>
-                <option>Beds</option>
-                <option>Chairs</option>
-                <option>Dressers</option>
-                <option>Outdoor</option>
-                <option>Shelves</option>
-                <option>Sofas</option>
-                <option>Tables</option>
-            </select>
-            </div>
+<!-- header -->
+    <header>
+        <div class="header-image">
+            <img src="https://www.freeiconspng.com/uploads/basket-cart-icon-27.png" alt="Shopping Cart Logo">
         </div>
-        <!-- product name search -->
-        <aside class="name-filter">
-            <div class="filter-input-container">
-                <div class="search-icon">
-                    <img src="https://static.vecteezy.com/system/resources/previews/001/504/972/non_2x/search-icon-free-vector.jpg" alt="Spyglass Icon">
-                </div>
-                <label for="filter-name" class="filter-input-label">Product Name</label>
-                <div class="filter-input-element">
-                    <input type="text" name="filter-name" id="filter-name" class="filter-input">
-                </div>
+        <h1 class="site-title">Shopping POS</h1>
+    </header>
+
+    <main class="content">
+        <!-- receipt -->
+        <aside class="receipt-container">
+            <div class="receipt-items-container">
+                {{#each receiptItems}}
+                    {{> receiptItem}}
+                {{/each}}
+            </div>
+            <div class="receipt-total" data-total="20">
+                <h3>Total - $20</h3>
             </div>
         </aside>
-    </aside>
-    <!-- receipt -->
-    <aside class="receipt-container">
-        <div class="receipt-items-container">
-            {{#each receiptItems}}
-                {{> receiptItem}}
-            {{/each}}
+        <aside class="payment-container">
+            <button type="button" id="pay-button" class="receipt-button">Pay</button>
+            <button type="button" id="pay-cancel-button" class="receipt-button">Cancel</button>
+        </aside>
+
+        <!-- browsing -->
+        <section class="browsing-container">
+            <!-- filtering -->
+            <div class="sub-header">
+                <!-- type dropdown -->
+                <div class="filter-input-container">
+                    <label for="filter-type" class="filter-input-label">Product Category</label>
+                    <div class="filter-input-element">
+                    <select id="filter-type" class="filter-input" name="filter-type">
+                        <option selected value="">Any</option>
+                        <option>Beds</option>
+                        <option>Chairs</option>
+                        <option>Dressers</option>
+                        <option>Outdoor</option>
+                        <option>Shelves</option>
+                        <option>Sofas</option>
+                        <option>Tables</option>
+                    </select>
+                    </div>
+                </div>
+
+                <!-- search -->
+                <div class="name-filter">
+                    <div class="filter-input-container">
+                        <div class="search-icon">
+                            <img src="https://img.icons8.com/?size=100&id=112468&format=png&color=000000" alt="Spyglass Icon">
+                        </div>
+                        <label for="filter-name" class="filter-input-label">Product Name</label>
+                        <div class="filter-input-element">
+                            <input type="text" name="filter-name" id="filter-name" class="filter-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product flex box-->
+            <div id="products">
+                {{#each products}}
+                    {{> product}}
+                {{/each}}
+            </div>
+        </section>
+    </main>
+
+    <!-- popups -->
+    <div id="popup-backdrop" class="hidden"></div>
+    <!-- transaction popup -->
+    <div id="payment-popup" class="hidden">
+        <div id="payment-popup-header">
+            <button type="button" id="payment-cancel-button">Cancel</button>
+            <h1 id="payment-popup-title">Select Payment Method</h1>
         </div>
-        <div class="receipt-total" data-total="20">
-            <h3>Total - $20</h3>
+        <div class="payment-option">
+            <button type="button" class="payment-button" id="payment-cash-button">Cash</button>
+            <img src="https://img.freepik.com/free-psd/money-illustration-isolated_23-2151568528.jpg" alt="Cash icon" class="payment-option-img">
         </div>
-    </aside>
-    <aside class="payment-container">
-        <button type="button" id="pay-button" class="receipt-button">Pay</button>
-        <button type="button" id="pay-cancel-button" class="receipt-button">Cancel</button>
-    </aside>
-    <!-- product flex box-->
-    <section id="products">
-        <!-- product-->
-        {{#each products}}
-            {{> product}}
-        {{/each}}
-    </section>
-</main>
-<!-- popups -->
-<div id="popup-backdrop" class="hidden"></div>
-<!-- transaction popup -->
-<div id="payment-popup" class="hidden">
-    <div id="payment-popup-header">
-        <button type="button" id="payment-cancel-button">Cancel</button>
-        <h1 id="payment-popup-title">Select Payment Method</h1>
+        <div class="payment-option">
+            <button type="button" class="payment-button" id="payment-card-button">Card</button>
+            <img src="https://pngimg.com/d/credit_card_PNG100.png" alt="Card icon" class="payment-option-img">
+        </div>
     </div>
-    <div class="payment-option">
-        <button type="button" class="payment-button" id="payment-cash-button">Cash</button>
-        <img src="https://img.freepik.com/free-psd/money-illustration-isolated_23-2151568528.jpg" alt="Cash icon" class="payment-option-img">
+    <!-- completed transaction popup -->
+    <div id="complete-trans-popup" class="hidden">
+        <div id="complete-trans-popup-header">
+            <button type="button" id="complete-trans-cancel-button">Cancel</button>
+            <h1 id="complete-trans-title">Transaction completed! Thank you for shopping with us</h1>
+        </div>
+        <button type="button" id="complete-trans-ok-button">Okay</button>
     </div>
-    <div class="payment-option">
-        <button type="button" class="payment-button" id="payment-card-button">Card</button>
-        <img src="https://pngimg.com/d/credit_card_PNG100.png" alt="Card icon" class="payment-option-img">
-    </div>
-</div>
-<!-- completed transaction popup -->
-<div id="complete-trans-popup" class="hidden">
-    <div id="complete-trans-popup-header">
-        <button type="button" id="complete-trans-cancel-button">Cancel</button>
-        <h1 id="complete-trans-title">Transaction completed! Thank you for shopping with us</h1>
-    </div>
-    <button type="button" id="complete-trans-ok-button">Okay</button>
-</div>
