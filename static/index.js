@@ -53,14 +53,17 @@ function filterProductsByType() {
 
     productsContainer.innerHTML = ''
 
-    products.forEach((product) => {
+    products.forEach((productGrayBox) => {
+        var product = productGrayBox.querySelector('.product')
         var itemType = product.getAttribute('data-itemtype')
+
         if (selectedCategory === "" || itemType === selectedCategory) {
             //Add post back into container
-            productsContainer.appendChild(product)
-        } 
+            productsContainer.appendChild(productGrayBox)
+        }
     })
 }
+
 
 document.getElementById('filter-type').onchange = filterProductsByType
 

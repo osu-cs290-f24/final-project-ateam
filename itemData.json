@@ -4,7 +4,7 @@
     "price": "399.99",
     "image": "Beds/Beige_Bed_F.avif",
     "mouseImage": "Beds/Beige_Bed_S.avif",
-    "amount": "0",
+    "amount": "15",
     "itemType": "Beds"
   },
   "Black Bed": {
@@ -44,7 +44,7 @@
     "price": "1299.99",
     "image": "Beds/Wood_Bed_F.avif",
     "mouseImage": "Beds/Wood_Bed_S.avif",
-    "amount": "10",
+    "amount": "0",
     "itemType": "Beds"
   },
   "Beige Armchair": {
@@ -60,7 +60,7 @@
     "price": "34.99",
     "image": "Chairs/Black_Chair_F.avif",
     "mouseImage": "Chairs/Black_Chair_S.avif",
-    "amount": "24",
+    "amount": "0",
     "itemType": "Chairs"
   },
   "Green Swivel": {
@@ -68,7 +68,7 @@
     "price": "109.99",
     "image": "Chairs/Green_Swivel_F.avif",
     "mouseImage": "Chairs/Green_Swivel_S.avif",
-    "amount": "3",
+    "amount": "0",
     "itemType": "Chairs"
   },
   "Grey Armchair": {
@@ -84,7 +84,7 @@
     "price": "69.99",
     "image": "Chairs/Grey_Chair_F.avif",
     "mouseImage": "Chairs/Grey_Chair_S.avif",
-    "amount": "2",
+    "amount": "0",
     "itemType": "Chairs"
   },
   "Rocking Chair": {
@@ -100,7 +100,7 @@
     "price": "23.99",
     "image": "Chairs/White_Chair_F.avif",
     "mouseImage": "Chairs/White_Chair_S.avif",
-    "amount": "30",
+    "amount": "29",
     "itemType": "Chairs"
   },
   "Black Drawer": {
@@ -109,7 +109,7 @@
     "image": "Dressers-Storage/Black_Drawer_F.avif",
     "mouseImage": "Dressers-Storage/Black_Drawer_S.avif",
     "amount": "4",
-    "itemType": "Dressers-Storage"
+    "itemType": "Dressers"
   },
   "Black Nightstand": {
     "name": "Black Nightstand",
@@ -117,7 +117,7 @@
     "image": "Dressers-Storage/Black_Nightstand_F.avif",
     "mouseImage": "Dressers-Storage/Black_Nightstand_S.webp",
     "amount": "7",
-    "itemType": "Dressers-Storage"
+    "itemType": "Dressers"
   },
   "Storage Baskets": {
     "name": "Storage Baskets",
@@ -125,7 +125,7 @@
     "image": "Dressers-Storage/Storage_Baskets_F.avif",
     "mouseImage": "Dressers-Storage/Storage_Baskets_S.avif",
     "amount": "12",
-    "itemType": "Dressers-Storage"
+    "itemType": "Dressers"
   },
   "Tall Drawer": {
     "name": "Tall Drawer",
@@ -133,7 +133,7 @@
     "image": "Dressers-Storage/Tall_Drawer_F.avif",
     "mouseImage": "Dressers-Storage/Tall_Drawer_S.avif",
     "amount": "3",
-    "itemType": "Dressers-Storage"
+    "itemType": "Dressers"
   },
   "White Drawer": {
     "name": "White Drawer",
@@ -141,7 +141,7 @@
     "image": "Dressers-Storage/White_Drawer_F.avif",
     "mouseImage": "Dressers-Storage/White_Drawer_S.avif",
     "amount": "23",
-    "itemType": "Dressers-Storage"
+    "itemType": "Dressers"
   },
   "Wood Drawer": {
     "name": "Wood Drawer",
@@ -149,7 +149,7 @@
     "image": "Dressers-Storage/Wood_Drawer_F.avif",
     "mouseImage": "Dressers-Storage/Wood_Drawer_S.avif",
     "amount": "9",
-    "itemType": "Dressers-Storage"
+    "itemType": "Dressers"
   },
   "Bench": {
     "name": "Bench",
@@ -157,7 +157,7 @@
     "image": "Outdoor-Furniture/Bench_F.avif",
     "mouseImage": "Outdoor-Furniture/Bench_S.avif",
     "amount": "24",
-    "itemType": "Outdoor-Furniture"
+    "itemType": "Outdoor"
   },
   "Green Set": {
     "name": "Green Set",
@@ -165,7 +165,7 @@
     "image": "Outdoor-Furniture/Green_Set_F.avif",
     "mouseImage": "Outdoor-Furniture/Green_Set_S.avif",
     "amount": "4",
-    "itemType": "Outdoor-Furniture"
+    "itemType": "Outdoor"
   },
   "Wooden Box": {
     "name": "Wooden Box",
@@ -173,7 +173,7 @@
     "image": "Outdoor-Furniture/Wooden_Box_F.avif",
     "mouseImage": "Outdoor-Furniture/Wooden_Box_S.avif",
     "amount": "6",
-    "itemType": "Outdoor-Furniture"
+    "itemType": "Outdoor"
   },
   "Wooden Folding Chair": {
     "name": "Wooden Folding Chair",
@@ -181,7 +181,7 @@
     "image": "Outdoor-Furniture/Wooden_Folding_Chair_F.avif",
     "mouseImage": "Outdoor-Furniture/Wooden_Folding_Chair_S.avif",
     "amount": "42",
-    "itemType": "Outdoor-Furniture"
+    "itemType": "Outdoor"
   },
   "Wooden Set": {
     "name": "Wooden Set",
@@ -189,7 +189,7 @@
     "image": "Outdoor-Furniture/Wooden_Set_F.avif",
     "mouseImage": "Outdoor-Furniture/Wooden_Set_S.webp",
     "amount": "6",
-    "itemType": "Outdoor-Furniture"
+    "itemType": "Outdoor"
   },
   "Black Shelf": {
     "name": "Black Shelf",
@@ -309,7 +309,7 @@
     "image": "Tables-Desks/Beige_Desk_F.avif",
     "mouseImage": "Tables-Desks/Beige_Desk_S.webp",
     "amount": "2",
-    "itemType": "Tables-Desks"
+    "itemType": "Tables"
   },
   "Black Side Table": {
     "name": "Black Side Table",
@@ -317,7 +317,7 @@
     "image": "Tables-Desks/Black_Side_Table_F.avif",
     "mouseImage": "Tables-Desks/Black_Side_Table_S.avif",
     "amount": "7",
-    "itemType": "Tables-Desks"
+    "itemType": "Tables"
   },
   "Black Table": {
     "name": "Black Table",
@@ -325,7 +325,7 @@
     "image": "Tables-Desks/Black_Table_F.avif",
     "mouseImage": "Tables-Desks/Black_Table_S.avif",
     "amount": "7",
-    "itemType": "Tables-Desks"
+    "itemType": "Tables"
   },
   "Coffee Table": {
     "name": "Coffee Table",
@@ -333,7 +333,7 @@
     "image": "Tables-Desks/Coffee_Table_F.avif",
     "mouseImage": "Tables-Desks/Coffee_Table_S.avif",
     "amount": "8",
-    "itemType": "Tables-Desks"
+    "itemType": "Tables"
   },
   "Oak Table": {
     "name": "Oak Table",
@@ -341,7 +341,7 @@
     "image": "Tables-Desks/Oak_Table_F.avif",
     "mouseImage": "Tables-Desks/Oak_Table_S.avif",
     "amount": "8",
-    "itemType": "Tables-Desks"
+    "itemType": "Tables"
   },
   "Wood Side Table": {
     "name": "Wood Side Table",
@@ -349,6 +349,6 @@
     "image": "Tables-Desks/Wood_Side_Table_F.avif",
     "mouseImage": "Tables-Desks/Wood_Side_Table_S.avif",
     "amount": "6",
-    "itemType": "Tables-Desks"
+    "itemType": "Tables"
   }
 }

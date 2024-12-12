@@ -11,9 +11,9 @@ var app = express()
 var port = process.env.PORT || 3000
 
 // Register handlebars with server
-var exphbs = require('express-handlebars');
-app.engine('handlebars', exphbs.engine({ defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
+var exphbs = require('express-handlebars')
+app.engine('handlebars', exphbs.engine({ defaultLayout: 'main'}))
+app.set('view engine', 'handlebars')
 
 // Load static files
 app.use(express.static('static'))
@@ -22,24 +22,25 @@ app.use(express.json())
 
 // CREATE backup of itemData.json
 var originalDataPath = path.join(__dirname, 'itemData.original.json')
-if (fs.existsSync(originalDataPath)) {
-    fs.copyFileSync(path.join(__dirname, 'itemdata.json'), originalDataPath)
+if (!fs.existsSync(originalDataPath)) {
+    fs.copyFileSync(path.join(__dirname, 'itemData.json'), originalDataPath)
 }
 // add route to index.js to restore itemData.js
 app.post('/restore', (req, res) => {
     try {
+
         // Restore the backup
         fs.copyFileSync(originalDataPath, path.join(__dirname, 'itemData.json'))
 
         // Reload productList from the restored file
-        const restoredData = JSON.parse(fs.readFileSync(path.join(__dirname, 'itemData.json')))
+        var restoredData = JSON.parse(fs.readFileSync(path.join(__dirname, 'itemData.json')))
         Object.assign(productList, restoredData);
 
         // Send JSON response
         res.status(200).send({ message: "Stock restored successfully" })
     } catch (err) {
         console.error("Error restoring stock:", err)
-        res.status(500).send({ message: "Failed to restore stock" })
+        res.status(404).send({ message: "Failed to restore stock" })
     }})
 
 
@@ -71,6 +72,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/products', function (req, res) {
+
     res.status(200).render("productPage", {
         products: productList,
         receiptItems: []
