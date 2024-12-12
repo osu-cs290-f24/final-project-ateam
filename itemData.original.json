@@ -12,7 +12,7 @@
     "price": "599.99",
     "image": "Beds/Black_Bed_F.avif",
     "mouseImage": "Beds/Black_Bed_S.avif",
-    "amount": "0",
+    "amount": "12",
     "itemType": "Beds"
   },
   "Grey Bed": {
@@ -20,7 +20,7 @@
     "price": "349.99",
     "image": "Beds/Grey_Bed_F.avif",
     "mouseImage": "Beds/Grey_Bed_S.avif",
-    "amount": "0",
+    "amount": "4",
     "itemType": "Beds"
   },
   "Poster Frame": {
@@ -28,7 +28,7 @@
     "price": "1199.99",
     "image": "Beds/Poster_Frame_F.avif",
     "mouseImage": "Beds/Poster_Frame_S.avif",
-    "amount": "0",
+    "amount": "5",
     "itemType": "Beds"
   },
   "Stackable Bed": {
@@ -36,7 +36,7 @@
     "price": "399.99",
     "image": "Beds/Stackable_Bed_F.avif",
     "mouseImage": "Beds/Stackable_Bed_S.avif",
-    "amount": "0",
+    "amount": "22",
     "itemType": "Beds"
   },
   "Wood Bed": {
@@ -44,7 +44,7 @@
     "price": "1299.99",
     "image": "Beds/Wood_Bed_F.avif",
     "mouseImage": "Beds/Wood_Bed_S.avif",
-    "amount": "0",
+    "amount": "12",
     "itemType": "Beds"
   },
   "Beige Armchair": {
@@ -52,7 +52,7 @@
     "price": "89.99",
     "image": "Chairs/Beige_Armchair_F.avif",
     "mouseImage": "Chairs/Beige_Armchair_S.avif",
-    "amount": "0",
+    "amount": "3",
     "itemType": "Chairs"
   },
   "Black Chair": {
@@ -60,7 +60,7 @@
     "price": "34.99",
     "image": "Chairs/Black_Chair_F.avif",
     "mouseImage": "Chairs/Black_Chair_S.avif",
-    "amount": "0",
+    "amount": "15",
     "itemType": "Chairs"
   },
   "Green Swivel": {
@@ -68,7 +68,7 @@
     "price": "109.99",
     "image": "Chairs/Green_Swivel_F.avif",
     "mouseImage": "Chairs/Green_Swivel_S.avif",
-    "amount": "0",
+    "amount": "3",
     "itemType": "Chairs"
   },
   "Grey Armchair": {
@@ -76,7 +76,7 @@
     "price": "74.99",
     "image": "Chairs/Grey_Armchair_F.avif",
     "mouseImage": "Chairs/Grey_Armchair_S.avif",
-    "amount": "0",
+    "amount": "2",
     "itemType": "Chairs"
   },
   "Grey Chair": {
@@ -84,7 +84,7 @@
     "price": "69.99",
     "image": "Chairs/Grey_Chair_F.avif",
     "mouseImage": "Chairs/Grey_Chair_S.avif",
-    "amount": "0",
+    "amount": "6",
     "itemType": "Chairs"
   },
   "Rocking Chair": {

@@ -187,3 +187,13 @@ function filterProductsByName() {
 
 // Add an event listener for the input box
 document.getElementById('filter-name').addEventListener('input', filterProductsByName);
+
+// ADDED CTRL F MAPPING FOR FUN - Seth
+var searchBar = document.getElementById('filter-name')
+
+document.addEventListener('keydown', function (event) {
+    if((event.ctrlKey || event.metaKey) && event.key === 'f') {
+        event.preventDefault()
+        searchBar.focus()
+    }
+})
