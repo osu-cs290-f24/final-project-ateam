@@ -19,7 +19,10 @@ var transCompletePopup = document.getElementById("complete-trans-popup")
 
 // Toggle display of payment popup
 function togglePayPopup() {
+    var receiptTotalElement = document.querySelector('.receipt-total')
+    var total = parseFloat(receiptTotalElement.getAttribute('data-total'))
     //popupBg.classList.toggle("hidden")
+    if (total === 0) { return }
     payPopup.classList.toggle("hidden")
 }
 // Register payment toggle function to payment button and payment cancel button

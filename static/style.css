@@ -505,3 +505,29 @@ header {
 #complete-trans-ok-button:hover {
     background-color: #218838;
 }
+
+
+/*Mouseover functionality?*/
+.product-image-container {
+    position: relative;
+    display: block;
+    transition: opacity 0.5s ease; /* Smooth transition */
+
+}
+
+
+.product-image-container img.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease; /* Smooth transition */
+}
+
+.product-image-container:hover img.default-image {
+    opacity: 0; /* Hide the default image on hover */
+}
+
+.product-image-container:hover img.hover-image {
+    opacity: 1; /* Show the hover image on hover */
+}
