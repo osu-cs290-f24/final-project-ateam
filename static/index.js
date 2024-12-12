@@ -162,3 +162,25 @@ document.querySelectorAll('.product-add-button-container').forEach((button) => {
 })
 
 
+// "Product Name" sort
+var productsContainer = document.getElementById('products')
+var originalProductsOrder = Array.from(productsContainer.children)
+
+function filterProductsByName() {
+    // Get the entered product name ignoring case
+    var filterName = document.getElementById('filter-name').value.toUpperCase()
+
+    // Filter and sort products
+    var filteredProducts = originalProductsOrder.filter((productGrayBox) => {
+        var product = productGrayBox.querySelector('.product')
+        var productName = product.getAttribute('data-name').toUpperCase()
+        return productName.includes(filterName)
+    })
+
+    // Clear and re-append the filtered and sorted products
+    productsContainer.innerHTML = ''
+    filteredProducts.forEach((product) => productsContainer.appendChild(product))
+}
+
+// Add an event listener for the input box
+document.getElementById('filter-name').addEventListener('input', filterProductsByName);
