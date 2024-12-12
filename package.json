@@ -10,7 +10,7 @@
     "build": "handlebars views/productPage.handlebars -f static/productPage.js && handlebars views/partials/product.handlebars -f static/product.js && handlebars views/404Page.handlebars -f static/404Page.js && handlebars views/partials/receiptItem.handlebars -f static/receiptItem.js && handlebars views/layouts/main.handlebars -f static/main.js && handlebars views/homePage.handlebars -f static/homePage.js"
   },
   "dependencies": {
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "express-handlebars": "^8.0.1",
     "handlebars": "^4.7.8"
   }

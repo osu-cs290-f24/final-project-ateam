@@ -1,0 +1,354 @@
+{
+  "Beige Bed": {
+    "name": "Beige Bed",
+    "price": "399.99",
+    "image": "Beds/Beige_Bed_F.avif",
+    "mouseImage": "Beds/Beige_Bed_S.avif",
+    "amount": "15",
+    "itemType": "Beds"
+  },
+  "Black Bed": {
+    "name": "Black Bed",
+    "price": "599.99",
+    "image": "Beds/Black_Bed_F.avif",
+    "mouseImage": "Beds/Black_Bed_S.avif",
+    "amount": "0",
+    "itemType": "Beds"
+  },
+  "Grey Bed": {
+    "name": "Grey Bed",
+    "price": "349.99",
+    "image": "Beds/Grey_Bed_F.avif",
+    "mouseImage": "Beds/Grey_Bed_S.avif",
+    "amount": "0",
+    "itemType": "Beds"
+  },
+  "Poster Frame": {
+    "name": "Poster Frame",
+    "price": "1199.99",
+    "image": "Beds/Poster_Frame_F.avif",
+    "mouseImage": "Beds/Poster_Frame_S.avif",
+    "amount": "0",
+    "itemType": "Beds"
+  },
+  "Stackable Bed": {
+    "name": "Stackable Bed",
+    "price": "399.99",
+    "image": "Beds/Stackable_Bed_F.avif",
+    "mouseImage": "Beds/Stackable_Bed_S.avif",
+    "amount": "0",
+    "itemType": "Beds"
+  },
+  "Wood Bed": {
+    "name": "Wood Bed",
+    "price": "1299.99",
+    "image": "Beds/Wood_Bed_F.avif",
+    "mouseImage": "Beds/Wood_Bed_S.avif",
+    "amount": "0",
+    "itemType": "Beds"
+  },
+  "Beige Armchair": {
+    "name": "Beige Armchair",
+    "price": "89.99",
+    "image": "Chairs/Beige_Armchair_F.avif",
+    "mouseImage": "Chairs/Beige_Armchair_S.avif",
+    "amount": "0",
+    "itemType": "Chairs"
+  },
+  "Black Chair": {
+    "name": "Black Chair",
+    "price": "34.99",
+    "image": "Chairs/Black_Chair_F.avif",
+    "mouseImage": "Chairs/Black_Chair_S.avif",
+    "amount": "0",
+    "itemType": "Chairs"
+  },
+  "Green Swivel": {
+    "name": "Green Swivel",
+    "price": "109.99",
+    "image": "Chairs/Green_Swivel_F.avif",
+    "mouseImage": "Chairs/Green_Swivel_S.avif",
+    "amount": "0",
+    "itemType": "Chairs"
+  },
+  "Grey Armchair": {
+    "name": "Grey Armchair",
+    "price": "74.99",
+    "image": "Chairs/Grey_Armchair_F.avif",
+    "mouseImage": "Chairs/Grey_Armchair_S.avif",
+    "amount": "0",
+    "itemType": "Chairs"
+  },
+  "Grey Chair": {
+    "name": "Grey Chair",
+    "price": "69.99",
+    "image": "Chairs/Grey_Chair_F.avif",
+    "mouseImage": "Chairs/Grey_Chair_S.avif",
+    "amount": "0",
+    "itemType": "Chairs"
+  },
+  "Rocking Chair": {
+    "name": "Rocking Chair",
+    "price": "129.99",
+    "image": "Chairs/Rocking_Chair_F.avif",
+    "mouseImage": "Chairs/Rocking_Chair_S.avif",
+    "amount": "1",
+    "itemType": "Chairs"
+  },
+  "White Chair": {
+    "name": "White Chair",
+    "price": "23.99",
+    "image": "Chairs/White_Chair_F.avif",
+    "mouseImage": "Chairs/White_Chair_S.avif",
+    "amount": "29",
+    "itemType": "Chairs"
+  },
+  "Black Drawer": {
+    "name": "Black Drawer",
+    "price": "289.99",
+    "image": "Dressers-Storage/Black_Drawer_F.avif",
+    "mouseImage": "Dressers-Storage/Black_Drawer_S.avif",
+    "amount": "4",
+    "itemType": "Dressers"
+  },
+  "Black Nightstand": {
+    "name": "Black Nightstand",
+    "price": "48.99",
+    "image": "Dressers-Storage/Black_Nightstand_F.avif",
+    "mouseImage": "Dressers-Storage/Black_Nightstand_S.webp",
+    "amount": "7",
+    "itemType": "Dressers"
+  },
+  "Storage Baskets": {
+    "name": "Storage Baskets",
+    "price": "27.99",
+    "image": "Dressers-Storage/Storage_Baskets_F.avif",
+    "mouseImage": "Dressers-Storage/Storage_Baskets_S.avif",
+    "amount": "12",
+    "itemType": "Dressers"
+  },
+  "Tall Drawer": {
+    "name": "Tall Drawer",
+    "price": "199.99",
+    "image": "Dressers-Storage/Tall_Drawer_F.avif",
+    "mouseImage": "Dressers-Storage/Tall_Drawer_S.avif",
+    "amount": "3",
+    "itemType": "Dressers"
+  },
+  "White Drawer": {
+    "name": "White Drawer",
+    "price": "119.99",
+    "image": "Dressers-Storage/White_Drawer_F.avif",
+    "mouseImage": "Dressers-Storage/White_Drawer_S.avif",
+    "amount": "23",
+    "itemType": "Dressers"
+  },
+  "Wood Drawer": {
+    "name": "Wood Drawer",
+    "price": "48.99",
+    "image": "Dressers-Storage/Wood_Drawer_F.avif",
+    "mouseImage": "Dressers-Storage/Wood_Drawer_S.avif",
+    "amount": "9",
+    "itemType": "Dressers"
+  },
+  "Bench": {
+    "name": "Bench",
+    "price": "64.99",
+    "image": "Outdoor-Furniture/Bench_F.avif",
+    "mouseImage": "Outdoor-Furniture/Bench_S.avif",
+    "amount": "24",
+    "itemType": "Outdoor"
+  },
+  "Green Set": {
+    "name": "Green Set",
+    "price": "249.99",
+    "image": "Outdoor-Furniture/Green_Set_F.avif",
+    "mouseImage": "Outdoor-Furniture/Green_Set_S.avif",
+    "amount": "4",
+    "itemType": "Outdoor"
+  },
+  "Wooden Box": {
+    "name": "Wooden Box",
+    "price": "24.99",
+    "image": "Outdoor-Furniture/Wooden_Box_F.avif",
+    "mouseImage": "Outdoor-Furniture/Wooden_Box_S.avif",
+    "amount": "6",
+    "itemType": "Outdoor"
+  },
+  "Wooden Folding Chair": {
+    "name": "Wooden Folding Chair",
+    "price": "12.99",
+    "image": "Outdoor-Furniture/Wooden_Folding_Chair_F.avif",
+    "mouseImage": "Outdoor-Furniture/Wooden_Folding_Chair_S.avif",
+    "amount": "42",
+    "itemType": "Outdoor"
+  },
+  "Wooden Set": {
+    "name": "Wooden Set",
+    "price": "248.99",
+    "image": "Outdoor-Furniture/Wooden_Set_F.avif",
+    "mouseImage": "Outdoor-Furniture/Wooden_Set_S.webp",
+    "amount": "6",
+    "itemType": "Outdoor"
+  },
+  "Black Shelf": {
+    "name": "Black Shelf",
+    "price": "359.99",
+    "image": "Shelves/Black_Shelf_F.avif",
+    "mouseImage": "Shelves/Black_Shelf_S.avif",
+    "amount": "3",
+    "itemType": "Shelves"
+  },
+  "Cobalt Bookcase": {
+    "name": "Cobalt Bookcase",
+    "price": "189.99",
+    "image": "Shelves/Cobalt_Bookcase_F.avif",
+    "mouseImage": "Shelves/Cobalt_Bookcase_S.avif",
+    "amount": "1",
+    "itemType": "Shelves"
+  },
+  "Cobalt Shelf": {
+    "name": "Cobalt Shelf",
+    "price": "129.99",
+    "image": "Shelves/Cobalt_Shelf_F.avif",
+    "mouseImage": "Shelves/Cobalt_Shelf_S.avif",
+    "amount": "4",
+    "itemType": "Shelves"
+  },
+  "Corner Bookcase": {
+    "name": "Corner Bookcase",
+    "price": "349.99",
+    "image": "Shelves/Corner_Bookcase_F.webp",
+    "mouseImage": "Shelves/Corner_Bookcase_S.avif",
+    "amount": "2",
+    "itemType": "Shelves"
+  },
+  "Green Shelf": {
+    "name": "Green Shelf",
+    "price": "129.99",
+    "image": "Shelves/Green_Shelf_F.avif",
+    "mouseImage": "Shelves/Green_Shelf_S.avif",
+    "amount": "2",
+    "itemType": "Shelves"
+  },
+  "White Shelf": {
+    "name": "White Shelf",
+    "price": "74.99",
+    "image": "Shelves/White_Shelf_F.avif",
+    "mouseImage": "Shelves/White_Shelf_S.avif",
+    "amount": "8",
+    "itemType": "Shelves"
+  },
+  "Wood Bookcase": {
+    "name": "Wood Bookcase",
+    "price": "269.99",
+    "image": "Shelves/Wood_Bookcase_F.avif",
+    "mouseImage": "Shelves/Wood_Bookcase_S.avif",
+    "amount": "15",
+    "itemType": "Shelves"
+  },
+  "Beige Sectional": {
+    "name": "Beige Sectional",
+    "price": "679.99",
+    "image": "Sofas/Beige_Sectional_F.avif",
+    "mouseImage": "Sofas/Beige_Sectional_S.avif",
+    "amount": "3",
+    "itemType": "Sofas"
+  },
+  "Large Grey Sectional": {
+    "name": "Large Grey Sectional",
+    "price": "499.99",
+    "image": "Sofas/Large_Grey_Sectional_F.avif",
+    "mouseImage": "Sofas/Large_Grey_Sectional_S.avif",
+    "amount": "7",
+    "itemType": "Sofas"
+  },
+  "Sleeper Sofa": {
+    "name": "Sleeper Sofa",
+    "price": "589.99",
+    "image": "Sofas/Sleeper_Sofa_F.avif",
+    "mouseImage": "Sofas/Sleeper_Sofa_S.avif",
+    "amount": "2",
+    "itemType": "Sofas"
+  },
+  "White Sofa": {
+    "name": "White Sofa",
+    "price": "239.99",
+    "image": "Sofas/White_Sofa_F.avif",
+    "mouseImage": "Sofas/White_Sofa_S.webp",
+    "amount": "41",
+    "itemType": "Sofas"
+  },
+  "Red Sofa": {
+    "name": "Red Sofa",
+    "price": "399.99",
+    "image": "Sofas/Red_Sofa_F.avif",
+    "mouseImage": "Sofas/Red_Sofa_S.avif",
+    "amount": "5",
+    "itemType": "Sofas"
+  },
+  "Small Grey Sectional": {
+    "name": "Small Grey Sectional",
+    "price": "139.99",
+    "image": "Sofas/Small_Grey_Sectional_F.avif",
+    "mouseImage": "Sofas/Small_Grey_Sectional_S.avif",
+    "amount": "2",
+    "itemType": "Sofas"
+  },
+  "Yellow Sofa": {
+    "name": "Yellow Sofa",
+    "price": "219.99",
+    "image": "Sofas/Yellow_Sofa_F.avif",
+    "mouseImage": "Sofas/Yellow_Sofa_S.avif",
+    "amount": "1",
+    "itemType": "Sofas"
+  },
+  "Beige Desk": {
+    "name": "Beige Desk",
+    "price": "74.99",
+    "image": "Tables-Desks/Beige_Desk_F.avif",
+    "mouseImage": "Tables-Desks/Beige_Desk_S.webp",
+    "amount": "2",
+    "itemType": "Tables"
+  },
+  "Black Side Table": {
+    "name": "Black Side Table",
+    "price": "54.99",
+    "image": "Tables-Desks/Black_Side_Table_F.avif",
+    "mouseImage": "Tables-Desks/Black_Side_Table_S.avif",
+    "amount": "7",
+    "itemType": "Tables"
+  },
+  "Black Table": {
+    "name": "Black Table",
+    "price": "129.99",
+    "image": "Tables-Desks/Black_Table_F.avif",
+    "mouseImage": "Tables-Desks/Black_Table_S.avif",
+    "amount": "7",
+    "itemType": "Tables"
+  },
+  "Coffee Table": {
+    "name": "Coffee Table",
+    "price": "80.99",
+    "image": "Tables-Desks/Coffee_Table_F.avif",
+    "mouseImage": "Tables-Desks/Coffee_Table_S.avif",
+    "amount": "8",
+    "itemType": "Tables"
+  },
+  "Oak Table": {
+    "name": "Oak Table",
+    "price": "139.99",
+    "image": "Tables-Desks/Oak_Table_F.avif",
+    "mouseImage": "Tables-Desks/Oak_Table_S.avif",
+    "amount": "8",
+    "itemType": "Tables"
+  },
+  "Wood Side Table": {
+    "name": "Wood Side Table",
+    "price": "119.99",
+    "image": "Tables-Desks/Wood_Side_Table_F.avif",
+    "mouseImage": "Tables-Desks/Wood_Side_Table_S.avif",
+    "amount": "6",
+    "itemType": "Tables"
+  }
+}
